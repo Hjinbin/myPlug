@@ -1,0 +1,6 @@
+{
+  "name": "Myplug",
+  "tagline": "myPlug",
+  "body": "<ul>\r\n      <li><a href=\"jquery-banner/jquery-banner.html\">轮播</a></li>\r\n      <li><a href=\"jquery-calendar/jquery-calendar.html\">日历控件</a></li>\r\n      <li><a href=\"jquery-popup/jquery-popup.html\">弹出列表</a></li>\r\n      <li><a href=\"jquery-select/jquery-select.html\">下拉框</a></li>\r\n      <li><a href=\"jquery-zoomImg/jquery-zoomImg.html\">图片放大镜</a></li>\r\n    </ul>\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
