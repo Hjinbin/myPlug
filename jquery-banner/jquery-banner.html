@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>日历-calendar</title>
+	<link rel="stylesheet" type="text/css" href="jquery-calendar.css">
+	<style type="text/css">
+	body{font-size: 16px;}
+	.wrap{width: 1000px;margin:100px auto;height: 500px;}
+	.timeInput{float: left; margin:10px 20px;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<p>日历控件</p>
+		<pre>
+$('#dateTime1').calendar();
+$('#dateTime2').calendar();
+$('#dateTime3').calendar();
+		</pre>
+		<div class="timeInput">请输入时间<input type="text" name="" value = "" id="dateTime1"></div>
+		<div class="timeInput">请输入时间<input type="text" name="" value = "" id="dateTime2"></div>
+		<div class="timeInput">请输入时间<input type="text" name="" value = "" id="dateTime3"></div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.calendar.js"></script>
+	<script type="text/javascript">
+		$('#dateTime1').calendar();
+		$('#dateTime2').calendar();
+		$('#dateTime3').calendar();
+	</script>
+</body>
+</html>
