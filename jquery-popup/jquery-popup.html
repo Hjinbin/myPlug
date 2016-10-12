@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹出层</title>
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		li{list-style: none;}
+		a{text-decoration: none;color: #000;}
+		.hide{display: none}
+		.wrap{width: 1000px;margin:50px auto 0; background: #eaeaea;height: 500px;padding:10px;}
+		.popUp{cursor:default;background-color: #ddd;width: 150px;height: 40px;line-height: 40px;text-align: center;}
+		.popUpAct{background-color: #fff;}
+		.popUpMenu{}
+		li a{height: 25px;line-height:25px;display: block;text-indent: 1em;background-color:#fff;width: 150px;}
+		.itemAct a{background-color: #ddd;}
+		.popItem{float: left; margin-right: 10px;}
+		p{width: 998px;margin:20px auto;border:1px dashed #ccc;padding:10px;}
+	</style>
+</head>
+<body>
+	<p>鼠标移入移出显示或隐藏菜单，鼠标滑过菜单项改变背景颜色<br/>
+	$('#popUp01').popup();<br/>
+	$('#popUp02').popup();<br/>
+	$('#popUp03').popup();<br/></p>
+	<div class="wrap">
+		<ul>
+			<li class="popItem">
+				<div class="popUp" id="popUp01">鼠标到此弹出菜单</div>
+				<div>
+					<ul class="popUpMenu hide">
+						<li><a href="#">内容一</a></li>
+						<li><a href="#">内容二</a></li>
+						<li><a href="#">内容三</a></li>
+						<li><a href="#">内容四</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="popItem">
+				<div class="popUp" id="popUp02">鼠标到此弹出菜单</div>
+				<div>
+					<ul class="popUpMenu hide">
+						<li><a href="#">内容一</a></li>
+						<li><a href="#">内容二</a></li>
+						<li><a href="#">内容三</a></li>
+						<li><a href="#">内容四</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="popItem">
+				<div class="popUp" id="popUp03">鼠标到此弹出菜单</div>
+				<div>
+					<ul class="popUpMenu hide">
+						<li><a href="#">内容一</a></li>
+						<li><a href="#">内容二</a></li>
+						<li><a href="#">内容三</a></li>
+						<li><a href="#">内容四</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.popup.js"></script>
+	<script type="text/javascript">
+		$('#popUp01').popup();
+		$('#popUp02').popup();
+		$('#popUp03').popup();
+	</script>
+</body>
+</html>
