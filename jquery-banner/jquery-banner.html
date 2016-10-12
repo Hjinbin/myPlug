@@ -2,32 +2,102 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>日历-calendar</title>
-	<link rel="stylesheet" type="text/css" href="jquery-calendar.css">
+	<title>轮播插件</title>
 	<style type="text/css">
-	body{font-size: 16px;}
-	.wrap{width: 1000px;margin:100px auto;height: 500px;}
-	.timeInput{float: left; margin:10px 20px;}
+	*{margin:0; padding:0;}
+	li{list-style: none;}
+	a{text-decoration: none; outline: none;}
+	.wrap{width: 1000px;margin:0 auto;}
+	p{width: 988px;border:1px dashed #ccc;margin-top: 20px;border-radius: 2px;padding: 5px 5px;}
+	.banner{position: relative;width: 1000px;height:320px;overflow: hidden;margin: 50px auto;}
+	.imgBox{position: absolute;width: 4000px;left:0;}
+	.imgBox li{width: 1000px;height:320px;float: left;}
+	.imgBox a{display: block;height: 998px;height: 318px;background-color: #ddd;border:1px solid #fff;}
+	.nav{position: absolute;bottom:10px;width: 100%;text-align: center;}
+	.nav a{width: 16px;height: 16px;line-height: 14px;text-align: center;display: inline-block;background-color: #999;color:#fff;border:0;border-radius:8px;}
+	.nav a:hover, .nav .act{background-color: #2881d7;}
+	.pageBtn, .pageBtnTwo{position: absolute;top: 130px;width: 100%}
+	.pageBtn a,.pageBtnTwo a{width:30px; height: 50px;display:inline-block;background:rgba(0,0,0,0.2);color: #fff;text-align: center;line-height: 50px;}
+	.pageBtn .next,.nextTwo{float: right;}
+	.hide{display: none;}
+	.bannerTwo{position: relative;width: 900px;height: 250px;overflow: hidden;margin:50px auto;}
+	.imgBoxTwo{position: absolute;width: 3600px;left:0;}
+	.imgBoxTwo li{width: 900px;height: 250px;float: left;}
+	.imgBoxTwo li a{float: left;width: 299px;height: 250px;border-right: 1px solid #fff;background-color: #ddd;}
 	</style>
 </head>
 <body>
 	<div class="wrap">
-		<p>日历控件</p>
-		<pre>
-$('#dateTime1').calendar();
-$('#dateTime2').calendar();
-$('#dateTime3').calendar();
-		</pre>
-		<div class="timeInput">请输入时间<input type="text" name="" value = "" id="dateTime1"></div>
-		<div class="timeInput">请输入时间<input type="text" name="" value = "" id="dateTime2"></div>
-		<div class="timeInput">请输入时间<input type="text" name="" value = "" id="dateTime3"></div>
+		<p>自动播放，无缝轮播<br/>
+		$('.banner').banner();</p>
+		<div class="banner">
+			<ul class="imgBox">
+				<li>
+					<a href="">1<img src=""></a>
+				</li>
+				<li>
+					<a href="">2<img src=""></a>
+				</li>
+				<li>
+					<a href="">3<img src=""></a>
+				</li>
+				<li>
+					<a href="">4<img src=""></a>
+				</li>
+			</ul>
+			<div class="nav">
+				<a href="javascript:void(0)" class="act">1</a>
+				<a href="javascript:void(0)">2</a>
+				<a href="javascript:void(0)">3</a>
+				<a href="javascript:void(0)">4</a>
+			</div>
+			<div class="pageBtn hide">
+				<a href="javascript:void(0)" class="prev"><</a>
+				<a href="javascript:void(0)" class="next">></a>
+			</div>
+		</div>
+		<p>不自动播放，无缝轮播<br/>
+		$('.bannerTwo').banner({'auto': false,'imgBoxCls': 'imgBoxTwo'});</p>
+		<div class="bannerTwo">
+			<ul class="imgBoxTwo">
+				<li>
+					<a href="">1<img src=""></a>
+					<a href="">2<img src=""></a>
+					<a href="">3<img src=""></a>
+				</li>
+				<li>
+					<a href="">4<img src=""></a>
+					<a href="">5<img src=""></a>
+					<a href="">6<img src=""></a>
+				</li>
+				<li>
+					<a href="">7<img src=""></a>
+					<a href="">8<img src=""></a>
+					<a href="">9<img src=""></a>
+				</li>
+				<li>
+					<a href="">10<img src=""></a>
+					<a href="">11<img src=""></a>
+					<a href="">12<img src=""></a>
+				</li>
+			</ul>
+			<div class="pageBtnTwo hide">
+				<a href="javascript:void(0)" class="prevTwo"><</a>
+				<a href="javascript:void(0)" class="nextTwo">></a>
+			</div>
+		</div>
 	</div>
 	<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.calendar.js"></script>
+	<script type="text/javascript" src="../js/jquery.banner.js"></script>
 	<script type="text/javascript">
-		$('#dateTime1').calendar();
-		$('#dateTime2').calendar();
-		$('#dateTime3').calendar();
+		$('.banner').banner();
+		$('.bannerTwo').banner({
+			'auto':false,
+			'imgBoxCls':'imgBoxTwo',
+			'pageBtn':'pageBtnTwo',
+			'prevPage': 'prevTwo',
+			'nextPage': 'nextTwo'
+		});
 	</script>
 </body>
 </html>
